@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc "$CFILE" -o cisfun && printf "cisfun"
+gcc "$CFILE" -o cisfun && echo -n "cisfun"
