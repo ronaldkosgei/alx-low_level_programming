@@ -6,7 +6,8 @@
  * main - Entry point of the program
  *
  * Description: This program assigns a random number to the variable n
- * and then prints the last digit of the number along with relevant information.
+ * and then prints the last digit of the
+ * number along with relevant information.
  *
  * Return: Always 0 (Success)
  */
