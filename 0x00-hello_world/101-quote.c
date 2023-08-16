@@ -3,10 +3,9 @@
 /**
  * main - Entry point
  *
- * Description: Prints exactly and that
- *              piece of art is useful
+ * Description: Prints the specified text to the standard error.
  *
- * Return 0;
+ * Return: Always 1 (error code)
  */
 
 int main(void)
