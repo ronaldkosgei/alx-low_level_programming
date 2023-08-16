@@ -4,23 +4,16 @@
  * main - Entry point of the program
  *
  * Description: This program prints all single-digit numbers of base 10
- * starting from 0, followed by a new line.
+ * starting from 0, followed by a new line, using putchar only twice.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-putchar('0' + 0);
-putchar('0' + 1);
-putchar('0' + 2);
-putchar('0' + 3);
-putchar('0' + 4);
-putchar('0' + 5);
-putchar('0' + 6);
-putchar('0' + 7);
-putchar('0' + 8);
-putchar('0' + 9);
+char c;
 
+for (c = '0'; c <= '9'; c++)
+putchar(c);
 putchar('\n');
 
 return (0);
