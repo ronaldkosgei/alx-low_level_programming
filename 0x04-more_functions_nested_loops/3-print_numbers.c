@@ -1,19 +1,16 @@
 #include "main.h"
 
-int _putchar(char c);
-
 /**
- * print_numbers - Prints numbers from 0 to 9
- * followed by a new line
+ * print_numbers - Prints numbers from 0 to 9 followed by a new line.
  */
 void print_numbers(void)
 {
-int i;
+char num;
 
-for (i = 0; i < 10; i++)
+for (num = '0'; num <= '9'; num++)
 {
-_putchar(i + '0'); /* Convert integer to character and print */
+_putchar(num); /* Print the current digit character */
 }
 
-_putchar('\n'); /* Print a newline character */
+_putchar('\n'); /* Print a newline character at the end */
 }
