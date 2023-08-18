@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point for the Fizz-Buzz program
+ * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int main(void)
 {
@@ -29,6 +29,6 @@ printf("%d ", i);
 }
 }
 
-printf("\n");
+printf("\n"); /* Print a newline at the end */
 return (0);
 }
