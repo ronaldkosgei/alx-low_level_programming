@@ -1,16 +1,15 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - Takes a date and prints how many days are left in the year,
+ *        taking leap years into account.
  *
- * Description: Tests the print_remaining_days function
- * for a leap year date: 02/29/2000
- *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
- int month;
+int month;
 int day;
 int year;
 
