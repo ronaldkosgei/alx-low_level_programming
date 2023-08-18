@@ -1,21 +1,19 @@
 #include "main.h"
 
-int _putchar(char c);
-
 /**
- * print_most_numbers - Prints numbers from 0 to 9, excluding 2 and 4
+ * print_most_numbers - Prints numbers from 0 to 9 except 2 and 4
  */
 void print_most_numbers(void)
 {
-char digit;
+int i;
 
-for (digit = '0'; digit <= '9'; digit++)
+for (i = 0; i < 10; i++)
 {
-if (digit != '2' && digit != '4')
+if (i != 2 && i != 4)
 {
-_putchar(digit);
+_putchar(i + '0'); /* Convert integer to character and print */
 }
 }
 
-_putchar('\n');
+_putchar('\n'); /* Print a newline character */
 }
