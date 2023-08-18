@@ -2,27 +2,27 @@
 #include <math.h>
 
 /**
- * is_prime - Check if a number is prime
- * @num: The number to check
+ * is_prime - Checks if a number is prime
+ * @num: The number to be checked
+ *
  * Return: 1 if prime, 0 otherwise
  */
 int is_prime(long num)
 {
+long i;
+
 if (num <= 1)
-return 0;
+return (0);
 if (num <= 3)
-return 1;
+return (1);
 
-if (num % 2 == 0 || num % 3 == 0)
-return 0;
-
-for (long i = 5; i * i <= num; i += 6)
+for (i = 5; i * i <= num; i += 6)
 {
 if (num % i == 0 || num % (i + 2) == 0)
-return 0;
+return (0);
 }
 
-return 1;
+return (1);
 }
 
 /**
@@ -34,20 +34,24 @@ int main(void)
 {
 long num = 612852475143;
 long largest_prime_factor = 2;
+long i;
 
-while (num > 1)
+while (num % 2 == 0)
 {
-if (num % largest_prime_factor == 0)
+num /= 2;
+}
+
+for (i = 3; i <= sqrt(num); i += 2)
 {
-num /= largest_prime_factor;
-}
-else
+while (num % i == 0 && is_prime(i))
 {
-largest_prime_factor++;
-while (!is_prime(largest_prime_factor))
-largest_prime_factor++;
+largest_prime_factor = i;
+num /= i;
 }
 }
+
+if (num > 2 && is_prime(num))
+largest_prime_factor = num;
 
 printf("%ld\n", largest_prime_factor);
 return (0);
