@@ -1,4 +1,15 @@
-#include "main.h"
+#include <unistd.h>
+
+/**
+ * _putchar - Writes a character to stdout
+ * @c: The character to be written
+ *
+ * Return: On success 1, on error -1
+ */
+int _putchar(char c)
+{
+return (write(1, &c, 1));
+}
 
 /**
  * print_number - Prints an integer
@@ -6,33 +17,14 @@
  */
 void print_number(int n)
 {
-int divisor = 1;
-int num = n;
-int is_negative = 0;
-
-if (n == 0)
-{
-_putchar('0');
-return;
-}
-
 if (n < 0)
-{
+
 _putchar('-');
-num = -n;
-is_negative = 1;
+n = -n;
 }
 
-while (num / divisor > 9)
-divisor *= 10;
+if (n / 10)
+print_number(n / 10);
 
-while (divisor != 0)
-{
-_putchar((num / divisor) +'0');
-num %= divisor;
-divisor /= 10;
-}
-
-if (is_negative)
-_putchar('-');
+_putchar((n % 10) + '0');
 }
