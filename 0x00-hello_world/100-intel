@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="main.c" && BASENAME=$(basename "$CFILE" .c) && gcc -S -masm=intel "$CFILE" -o "${BASENAME}.s"
+CFILE="100-main.c" && BASENAME=$(basename "$CFILE" .c) && gcc -S -masm=intel "$CFILE" -o "${BASENAME}.s"
