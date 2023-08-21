@@ -6,12 +6,13 @@
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
-int array[1] = { 98 };
+int array[] = { 98, 402, -198, 298, -1024 };
+int size = sizeof(array) / sizeof(array[0]);
 
-print_array(array, 0);
-print_array(array, -1);
+print_array(array, size);
 
 return (0);
 }
