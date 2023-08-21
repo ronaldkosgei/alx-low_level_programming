@@ -1,9 +1,11 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * Description: Function prototype for reset_to_98 (assuming
- * it's defined in another file)
+ * reset_to_98 - Updates the value of an integer to 98
+ * @n: Pointer to the integer to be updated
+ *
+ * Description: This function takes a pointer to an integer
+ * and updates the value it points to 98.
  */
 void reset_to_98(int *n)
 {
