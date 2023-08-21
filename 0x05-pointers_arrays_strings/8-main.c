@@ -8,10 +8,10 @@
  */
 int main(void)
 {
-int numbers[] = {10, 20, 30, 40, 50};
-int size = sizeof(numbers) / sizeof(numbers[0]);
+int array[1] = { 98 };
 
-print_array(numbers, size);
+print_array(array, 0);
+print_array(array, -1);
 
 return (0);
 }

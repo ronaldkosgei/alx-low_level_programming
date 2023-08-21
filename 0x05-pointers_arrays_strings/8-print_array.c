@@ -8,18 +8,18 @@
  */
 void print_array(int *a, int n)
 {
-int i; /* Declare the loop variable outside the loop */
+int i;
 
 if (a == NULL || n <= 0)
-return; /* Nothing to print */
+return;
 
-for (i = 0; i < n; i++) /* Initialize the loop variable before the loop */
+for (i = 0; i < n; i++)
 {
 printf("%d", a[i]);
 
 if (i != n - 1)
-printf(", "); /* Print comma and space if it's not the last element */
+printf(", ");
 }
 
-printf("\n"); /* Print a new line after printing the elements */
+printf("\n");
 }
