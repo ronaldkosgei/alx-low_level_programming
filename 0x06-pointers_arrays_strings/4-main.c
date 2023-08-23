@@ -7,35 +7,29 @@
  * @n: the number of elements to swap
  *
  * Return: nothing.
- */
-void print_array(int *a, int n)
-{
-int i;
-
-i = 0;
-while (i < n)
-{
-if (i != 0)
-{
-printf(", ");
-}
-printf("%d", a[i]);
-i++;
-}
-printf("\n");
-}
-
-/**
- * main - check the code
  *
- * Return: Always 0.
  */
+void reverse_array(int *a, int n);
+
 int main(void)
 {
-int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
+int arr[] = {1, 2, 3, 4, 5};
+int n = sizeof(arr) / sizeof(arr[0]);
+int i; /* Declare i outside the loop */
 
-print_array(a, sizeof(a) / sizeof(int));
-reverse_array(a, sizeof(a) / sizeof(int));
-print_array(a, sizeof(a) / sizeof(int));
+printf("Original Array: ");
+for (i = 0; i < n; i++) /* Use i declared outside the loop */
+{
+printf("%d ", arr[i]);
+}
+
+reverse_array(arr, n);
+
+printf("\nReversed Array: ");
+for (i = 0; i < n; i++) /* Use i declared outside the loop */
+{
+printf("%d ", arr[i]);
+}
+
 return (0);
 }
