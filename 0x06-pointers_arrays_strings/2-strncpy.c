@@ -15,8 +15,8 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-char *originalDest = dest; /* Keep a reference to the original dest for returning */
-    
+char *originalDest = dest;
+/* Keep a reference to the original dest for returning */
 /* Copy up to n bytes from src to dest */
 while (*src != '\0' && n > 0)
 {
@@ -25,7 +25,6 @@ dest++;
 src++;
 n--;
 }
-    
 /* Fill remaining bytes in dest with null bytes if necessary */
 while (n > 0)
 {
@@ -33,6 +32,6 @@ while (n > 0)
 dest++;
 n--;
 }
-    
+
 return (originalDest);
 }

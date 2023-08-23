@@ -14,7 +14,8 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-char *originalDest = dest; /* Keep a reference to the original dest for returning */
+char *originalDest = dest;
+/* Keep a reference to the original dest for returning */
 
 /* Find the end of dest */
 while (*dest != '\0')
