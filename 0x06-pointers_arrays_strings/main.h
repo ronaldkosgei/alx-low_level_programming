@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <stddef.h>
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -13,5 +14,6 @@ void leet_encode(char *str);
 char *leet(char *str);
 void rot13_encode(char *str);
 char *rot13(char *str);
+void print_buffer(const char *b, size_t size);
 
 #endif /* MAIN_H */

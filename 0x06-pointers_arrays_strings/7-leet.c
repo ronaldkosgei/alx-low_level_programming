@@ -19,14 +19,3 @@ found++;
 }
 }
 }
-/**
- * main - Entry point of the program.
- * Return: Always 0.
- */
-int main(void)
-{
-char input[] = "Hello, World! This is leet encoding.";
-leet_encode(input);
-printf("Encoded: %s\n", input);
-return (0);
-}

@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <ctype.h>
+
+/**
+ * print_buffer - Prints the content of a buffer in a specific format.
+ * @b: Pointer to the buffer to print.
+ * @size: The size of the buffer.
+ */
+void print_buffer(const char *b, size_t size)
+{
+size_t i, j;/* Declare variables at the beginning of the block */
+const unsigned char *buffer = (const unsigned char *)b;
+if (size <= 0)
+{
+printf("\n");
+return;
+}
+for (i = 0; i < size; i += 10)
+{
+printf("%08lx: ", i);
+for (j = 0; j < 10; j++)
+{
+if (i + j < size)
+printf("%02x", buffer[i + j]);
+else
+printf("  ");
+if (j % 2 != 0)
+printf(" ");
+}
+for (j = 0; j < 10; j++)
+{
+if (i + j < size)
+printf("%c", isprint(buffer[i + j]) ? buffer[i + j] : '.');
+else
+break;
+}
+printf("\n");
+}
+}

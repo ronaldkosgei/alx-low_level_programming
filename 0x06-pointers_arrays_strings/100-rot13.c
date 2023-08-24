@@ -1,21 +1,28 @@
 #include <stdio.h>
-
 /**
- * rot13 - Encodes a string using ROT13 cipher.
+ * rot13_encode - Encodes a string using ROT13 cipher.
  * @str: The input string to be encoded.
- * Return: A pointer to the encoded string.
  */
-char *rot13(char *str)
+void rot13_encode(char *str)
 {
-char *start = str;
-while (*str != '\0')
+int i;/* Declare i before the loop */
+for (i = 0; str[i] != '\0'; i++)
 {
-if ((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
+if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 {
-char base = (*str >= 'a' && *str <= 'z') ? 'a' : 'A';
-*str = base + (*str - base + 13) % 26;
+char base = (str[i] >= 'a' && str[i] <= 'z') ? 'a' : 'A';
+str[i] = base + (str[i] - base + 13) % 26;
 }
-str++;
 }
-return (start);
+}
+/**
+ * main - Entry point of the program.
+ * Return: Always 0.
+ */
+int main(void)
+{
+char input[] = "Hello, World! This is ROT13 encoding.";
+rot13_encode(input);
+printf("Encoded: %s\n", input);
+return (0);
 }
