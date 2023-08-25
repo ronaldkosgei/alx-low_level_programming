@@ -1,0 +1,45 @@
+#include <unistd.h>  /* Needed for the write function */
+/**
+ * print_number - Prints an integer using _putchar.
+ * @n: The integer to be printed.
+ */
+void print_number(int n)
+{
+int divisor = 1;
+if (n < 0)
+{
+_putchar('-');
+n = -n;
+}
+while (n / divisor >= 10)
+{
+divisor *= 10;
+}
+while (divisor > 0)
+{
+_putchar((n / divisor) +'0');
+n %= divisor;
+divisor /= 10;
+}
+}
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always 0 (indicating success).
+ */
+int main(void)
+{
+int num = 12345;
+_putchar('[');
+print_number(num);
+_putchar(']');
+_putchar('\n');
+
+num = -9876;
+_putchar('[');
+print_number(num);
+_putchar(']');
+_putchar('\n');
+
+return (0);
+}

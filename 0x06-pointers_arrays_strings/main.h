@@ -15,5 +15,8 @@ char *leet(char *str);
 void rot13_encode(char *str);
 char *rot13(char *str);
 void print_buffer(const char *b, size_t size);
+char *add_strings(const char *n1, const char *n2, char *r, size_t size_r);
+void print_number(int n);
+int _putchar(char c);
 
 #endif /* MAIN_H */
