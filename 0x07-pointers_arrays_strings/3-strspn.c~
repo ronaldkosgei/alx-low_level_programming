@@ -1,0 +1,21 @@
+#include <stddef.h>
+
+/**
+ * _strspn - Gets the length of a prefix substring.
+ * @s: A pointer to the string to search in.
+ * @accept: A pointer to the characters that are considered valid.
+ *
+ * Return: The number of bytes in the initial segment of @s that consist only
+ *         of bytes from @accept.
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+unsigned int count = 0;
+while (*s != '\0' && strchr(accept, *s) != NULL)
+{
+/* Increment count for each character in @s that is in @accept */
+count++;
+s++;
+}
+return (count);
+}
