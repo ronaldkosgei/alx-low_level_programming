@@ -15,12 +15,9 @@ int sum_secondary = 0;/* Sum of the secondary diagonal */
 int i;
 for (i = 0; i < size; i++)
 {
-/* Calculate sums of primary and secondary diagonals */
 sum_primary += a[i * size + i];/* Access primary diagonal element */
-sum_secondary += a[i * size + (size - 1 - i)];
-/* Access secondary diagonal element */
+sum_secondary += a[i * size + (size - 1 - i)];/* Access secondary diagonal element */
 }
-/* Print the sums of the diagonals */
 printf("Sum of primary diagonal: %d\n", sum_primary);
 printf("Sum of secondary diagonal: %d\n", sum_secondary);
 }
