@@ -1,14 +1,12 @@
 #include <stdio.h>
 
 /**
- * _sqrt_helper - Helper function to find the square root using binary search.
+ * _sqrt_helper - Helper function to guess the square root using recursion.
  * @n: The number for which to calculate the square root.
- * @start: The lower bound of the binary search range.
- * @end: The upper bound of the binary search range.
- * Return: The square root of the number.
+ * @guess: The current guessed value.
+ * Return: The natural square root of the number.
  */
-int _sqrt_helper(int n, int start, int end);
-
+int _sqrt_helper(int n, int guess);
 /**
  * _sqrt_recursion - Returns the natural square root of a number.
  * @n: The number for which to calculate the square root.
@@ -19,38 +17,26 @@ int _sqrt_recursion(int n)
 if (n < 0)
 {
 return (-1);
+/* Negative input, return -1 to indicate an error */
 }
-if (n == 0 || n == 1)
-{
-return (n);
-}
-return (_sqrt_helper(n, 1, n));
+return (_sqrt_helper(n, 1)); /* Start guessing from 1 */
 }
 /**
- * _sqrt_helper - Helper function to find the square root
- * using binary search.
+ * _sqrt_helper - Helper function to guess the square root
+ * using recursion.
  * @n: The number for which to calculate the square root.
- * @start: The lower bound of the binary search range.
- * @end: The upper bound of the binary search range.
- * Return: The square root of the number.
+ * @guess: The current guessed value.
+ * Return: The natural square root of the number.
  */
-int _sqrt_helper(int n, int start, int end)
+int _sqrt_helper(int n, int guess)
 {
-int mid = start + (end - start) / 2;
-if (start > end)
+if (guess * guess == n)
 {
-return (-1);
+return (guess); /* Found the square root */
 }
-if (mid * mid == n)
+else if (guess * guess > n)
 {
-return (mid);
+return (-1); /* The number doesn't have a natural square root */
 }
-else if (mid * mid > n)
-{
-return (_sqrt_helper(n, start, mid - 1));
-}
-else
-{
-return (_sqrt_helper(n, mid + 1, end));
-}
+return (_sqrt_helper(n, guess + 1)); /* Guess higher */
 }
