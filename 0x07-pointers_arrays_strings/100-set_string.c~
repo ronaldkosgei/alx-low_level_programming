@@ -1,0 +1,9 @@
+/**
+ * set_char_ptr - Sets the value of a pointer to a char.
+ * @ptr: Pointer to a char.
+ * @value: Value to set the pointer to.
+ */
+void set_char_ptr(char *ptr, char value)
+{
+*ptr = value;
+}
