@@ -2,25 +2,25 @@
 #include <stdio.h>
 
 /**
- * sum_of_diagonals - Calculates and prints the sum of the
- * diagonals of a square matrix.
- * @matrix: The square matrix.
- * @n: The size of the matrix.
- */
-void sum_of_diagonals(int matrix[][3], int n); /* Function prototype*/
-/**
- * main - Entry point of the program.
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-int matrix[3][3] = {
-{1, 2, 3},
-{4, 5, 6},
-{7, 8, 9}
+int c3[3][3] = {
+{0, 1, 5},
+{10, 11, 12},
+{1000, 101, 102},
 };
-int n = 3;/*Size of the square matrix*/
-sum_of_diagonals(matrix, n);
+int c5[5][5] = {
+{0, 1, 5, 12124, 1234},
+{10, 11, 12, 123521, 12512},
+{1000, 101, 102, 12545, 214543435},
+{100, 1012451, 11102, 12545, 214543435},
+{10, 12401, 10452, 11542545, 1214543435},
+};
+print_diagsums((int *)c3, 3);
+print_diagsums((int *)c5, 5);
 return (0);
 }
