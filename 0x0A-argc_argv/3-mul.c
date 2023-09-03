@@ -18,7 +18,7 @@ return (1); /* Return 1 to indicate an error*/
 }
 num1 = atof(argv[1]);
 num2 = atof(argv[2]);
-product = num1 * num2;
+product = num1 *num2;
 printf("%.0f\n", product); /* Print the product as an integer */
 return (0);
 }
