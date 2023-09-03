@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-int amount, quarters, dimes, nickels, pennies;
+int amount, quarters, dimes, nickels, pennies, total_coins;
 if (argc != 2)
 {
 printf("Error\n");
@@ -39,6 +39,7 @@ nickels++;
 amount -= 5;
 }
 pennies = amount;
-printf("%d\n", quarters + dimes + nickels + pennies);
+total_coins = quarters + dimes + nickels + pennies;
+printf("%d\n", total_coins);
 return (0); /* Exit successfully*/
 }
