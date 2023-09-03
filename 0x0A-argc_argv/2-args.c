@@ -5,11 +5,12 @@
  * @argc: The number of command-line arguments (including program name)
  * @argv: An array containing the command-line arguments
  *
- * Return: Always 0 (success)
+ * Return: 0 on success
  */
 int main(int argc, char *argv[])
 {
-for (int i = 0; i < argc; i++)
+int i;
+for (i = 0; i < argc; i++)
 {
 printf("%s\n", argv[i]);
 }
