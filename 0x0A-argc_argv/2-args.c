@@ -5,15 +5,13 @@
  * @argc: The number of command-line arguments (including program name)
  * @argv: An array containing the command-line arguments
  *
- * Return: 0 on success
+ * Return: Always 0 (success)
  */
-int main(void) {
-int count = 0;
-while (*(__argv + count))
+int main(int argc, char *argv[])
 {
-count++;
+for (int i = 0; i < argc; i++)
+{
+printf("%s\n", argv[i]);
 }
-printf("%d\n", count - 1);
-/* Subtract 1 to exclude the program name*/
 return (0);
 }
