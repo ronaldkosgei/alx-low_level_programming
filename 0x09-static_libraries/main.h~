@@ -1,9 +1,0 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-/* Include the header file for your library */
-#include "my_functions.h"
-
-/* You can also add other declarations or definitions relevant to your project here */
-
-#endif /* MAIN_H */
