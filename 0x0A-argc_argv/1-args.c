@@ -7,13 +7,9 @@
  *
  * Return: 0 on success
  */
-int main(void) {
-int count = 0;
-while (*(__argv + count))
+int main(int argc, char *argv[])
 {
-count++;
-}
-printf("%d\n", count - 1);
-/* Subtract 1 to exclude the program name*/
+(void)argv; /* Silence the unused parameter warning*/
+printf("%d\n", argc - 1); /* Subtract 1 to exclude the program name*/
 return (0);
 }
