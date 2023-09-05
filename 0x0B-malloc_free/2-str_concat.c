@@ -21,7 +21,7 @@ s2 = "";
 len1 = strlen(s1);
 len2 = strlen(s2);
 total_len = len1 + len2 + 1; /* +1 for the null-terminator*/
-result = (char *)malloc(total_len * sizeof(char));
+result = (char *)malloc(total_len *sizeof(char));
 if (result == NULL)
 return (NULL);
 strcpy(result, s1);
