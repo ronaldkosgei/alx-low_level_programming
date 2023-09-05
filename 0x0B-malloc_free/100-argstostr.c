@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * argstostr - Concatenates all the command-line arguments
+ * into a single string.
+ * @ac: The number of command-line arguments.
+ * @av: An array of strings containing the command-line arguments.
+ *
+ * Return: A pointer to the concatenated string, or NULL
+ * if ac is 0 or av is NULL or if memory allocation fails.
+ */
+char *argstostr(int ac, char **av)
+{
+int total_length, offset, i;
+char *result;
+if (ac == 0 || av == NULL)
+return (NULL);
+total_length = 0;
+for (i = 0; i < ac; i++)
+{
+total_length += strlen(av[i]) + 1;
+}
+result = (char *)malloc(total_length + 1);
+if (result == NULL)
+return (NULL);
+offset = 0;
+for (i = 0; i < ac; i++)
+{
+strcpy(result + offset, av[i]);
+offset += strlen(av[i]);
+result[offset] = '\n';
+offset++;
+}
+result[offset] = '\0';
+return (result);
+}
