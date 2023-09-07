@@ -10,15 +10,11 @@
  */
 void *malloc_checked(unsigned int b)
 {
-void *ptr;
-/* Allocate memory using malloc */
-ptr = malloc(b);
-/* Check if memory allocation was successful */
+void *ptr = malloc(b);
 if (ptr == NULL)
 {
-fprintf(stderr, "Memory allocation failed.\n");
-exit(98);
-/* Terminate the process with status value 98 */
+exit(EXIT_FAILURE);
+/* Use the portable EXIT_FAILURE macro*/
 }
 return (ptr);
 }

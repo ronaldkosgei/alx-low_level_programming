@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * string_nconcat - Concatenate two strings with a limit
+ * @s1: The first string
+ * @s2: The second string
+ * @n: The maximum number of bytes from s2 to concatenate
+ *
+ * Return: A pointer to a newly allocated memory containing s1 followed by
+ *         the first n bytes of s2, null-terminated, or NULL on failure
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+char *result;
+unsigned int len1 = (s1 != NULL) ? strlen(s1) : 0;
+unsigned int len2 = (s2 != NULL) ? strlen(s2) : 0;
+unsigned int total_len;
+/* Determine the length of s2 to concatenate based on 'n' */
+if (n >= len2)
+n = len2;
+/* Calculate the total length needed for the result */
+total_len = len1 + n + 1; /* +1 for the null-terminator */
+/* Allocate memory for the result */
+result = (char *)malloc(total_len);
+if (result == NULL)
+{
+return (NULL); /* Memory allocation failed */
+}
+/* Copy s1 into the result */
+if (s1 != NULL)
+strcpy(result, s1);
+else
+strcpy(result, "");
+/* Concatenate the first 'n' bytes of s2 onto the result */
+strncat(result, s2, n);
+return (result);
+}
