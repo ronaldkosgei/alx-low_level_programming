@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point of the program
+ *
+ * Description: This is the main function of the program, which
+ * calculates and prints the absolute values of two numbers.
+ *
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+int num1 = -5;
+float num2 = -3.14;
+printf("Absolute value of num1: %d\n", ABS(num1));
+printf("Absolute value of num2: %f\n", ABS(num2));
+return (0);
+}
