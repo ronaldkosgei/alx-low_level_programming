@@ -1,0 +1,10 @@
+#include "myheader.h" /* Include the custom header file*/
+
+/**
+ * The SIZE macro is defined as an abbreviation for the token 1024.
+ * It can be used to represent a common size in kilobytes (KB).
+ */
+int main(void) {
+int array[SIZE]; /* Use the SIZE macro*/
+return (0);
+}
