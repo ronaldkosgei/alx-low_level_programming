@@ -11,7 +11,8 @@
  *
  * Return: Pointer to the newly created dog. NULL if memory allocation fails.
  */
-dog_t *new_dog(char *name, float age, char *owner) {
+dog_t *new_dog(char *name, float age, char *owner)
+{
 dog_t *new_dog;
 /* Allocate memory for the new dog */
 new_dog = malloc(sizeof(dog_t));
