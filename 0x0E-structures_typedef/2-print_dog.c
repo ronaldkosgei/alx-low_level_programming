@@ -1,31 +1,15 @@
 #include <stdio.h>
+#include "dog.h"
 
-/* Define the struct dog*/
-struct dog {
-    char *name;
-    int age;
-    char *breed;
-};
-/* Function to print the details of a dog*/
+/**
+ * print_dog - Prints the content of a struct dog.
+ * @d: Pointer to the struct dog to print.
+ */
 void print_dog(struct dog *d)
 {
-if (d == NULL)
-{
-return; /* Do nothing if d is NULL*/
+if (d != NULL) {
+printf("Name: %s\n", d->name ? d->name : "(nil)");
+printf("Age: %.1f\n", d->age);
+printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
 }
-/* Print the name, or (nil) if name is NULL*/
-printf("Name: %s\n", (d->name != NULL) ? d->name : "(nil)");
-/* Print the age*/
-printf("Age: %d\n", d->age);
-/* Print the breed, or (nil) if breed is NULL*/
-printf("Breed: %s\n", (d->breed != NULL) ? d->breed : "(nil)");
-}
-int main(void)
-{
-/* Create a sample dog*/
-struct dog my_dog = {NULL, 3, "Golden Retriever"
-};
-/* Call the print_dog function to print the details of the dog*/
-print_dog(&my_dog);
-return (0);
 }
