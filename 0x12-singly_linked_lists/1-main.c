@@ -10,26 +10,24 @@
  */
 int main(void)
 {
-list_t *head = NULL;
-list_t *new_node = NULL;
-/* Allocate memory for a new node*/
-new_node = malloc(sizeof(list_t));
-if (new_node == NULL)
+list_t *head;
+list_t *new;
+list_t hello = {"World", 5, NULL};
+size_t n;
+head = &hello;
+new = malloc(sizeof(list_t));
+if (new == NULL)
 {
-fprintf(stderr, "Error\n");
+printf("Error\n");
 return (1);
 }
-/* Initialize the new node*/
-new_node->str = strdup("Hello");
-new_node->len = 5;
-new_node->next = head;
-/* Update the head to point to the new node*/
-head = new_node;
-/* Call the list_len function to count and print the number of elements*/
-size_t n = list_len(head);
+new->str = strdup("Hello");
+new->len = 5;
+new->next = head;
+head = new;
+n = list_len(head);
 printf("-> %lu elements\n", n);
-/* Free the allocated memory for the new node*/
-free(new_node->str);
-free(new_node);
+free(new->str);
+free(new);
 return (0);
 }
