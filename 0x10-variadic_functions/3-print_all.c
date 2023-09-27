@@ -5,9 +5,10 @@
  * print_all - Prints arguments based on the provided format string.
  * @format: A string containing format specifiers.
  *
- * Description: The function takes a format string and a variable number of
- * arguments. It iterates through the format string and prints the corresponding
- * arguments based on the format specifiers. Supported specifiers:
+ * Description: The function takes a format string and a variable
+ * number of arguments. It iterates through the format string and
+ * prints the corresponding arguments based on the format specifiers.
+ * Supported specifiers:
  * - 'c' for char
  * - 'i' for integer
  * - 'f' for float
